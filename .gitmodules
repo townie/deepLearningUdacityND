@@ -1,0 +1,3 @@
+[submodule "workspace/fast-style-transfer"]
+	path = workspace/fast-style-transfer
+	url = https://github.com/townie/fast-style-transfer
