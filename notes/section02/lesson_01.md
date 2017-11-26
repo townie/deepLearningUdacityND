@@ -343,3 +343,54 @@ computing the loss at each point and then you can minimize the function of the e
 
 
 ###  Cross Entropy Formula
+
+cross-entropy = -SUM (y1 * ln(p1)) + (1 -y1)* ln(1 - p1)
+
+```
+import numpy as np
+
+# Write a function that takes as input two lists Y, P,
+# and returns the float corresponding to their cross-entropy.
+def cross_entropy(Y, P):
+    cross = 0
+    for y, p in zip(Y, P):
+        cross -= y*np.log(p) + (1-y) *np.log(1-p)
+    return cross
+
+  ```
+
+###  Cross Entropy Multiclass
+
+Compute the probablity then cross entropy for that class... duh!
+
+
+cross-entropy = -SUM(n:i SUM(m:j) yij * ln(pij) )
+
+
+## Logistic Regression
+
+
+Now, we're finally ready for one of the most popular and useful algorithms in Machine Learning, and the building block of all that constitutes Deep Learning. The Logistic Regression Algorithm. And it basically goes like this:
+
+- Take your data
+- Pick a random model
+- Calculate the error
+- Minimize the error, and obtain a better model
+- Enjoy!
+
+
+Calculating the Error Function
+Let's dive into the details. The next video will show you how to calculate an error function.
+
+E(W, b) = - 1/m SUM(m -> i=1) (1-yi)* ln(1 - sigmoid(Wx(i) + b)) + (yi)* ln(sigmoid(Wx(i) + b))
+
+### How to minimize the error function
+
+
+GOAL: Min Error Function
+
+process -> Gradient Descent
+
+
+# Gradient Descent
+
